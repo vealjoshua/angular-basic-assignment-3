@@ -1,0 +1,12 @@
+<p>
+  display-details works!
+</p>
+<button (click)="displayDetailsClicked()">Display Details</button>
+<p *ngIf="!textIsHidden">secret password = tuna</p>
+<ul *ngFor="let buttonClick of buttonClicks">
+  <li 
+    [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{'white-text': buttonClicks.length > 4}">
+    {{ buttonClick }}
+  </li>
+</ul>
